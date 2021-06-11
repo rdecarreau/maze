@@ -2,11 +2,10 @@ import imageio
 import time
 import maze
 
-raw = imageio.imread("mazes/png/20-20-Orthogonal.png")
+raw = imageio.imread("mazes/png/200-200-orthogonal-multipath-30.png")
 t1 = time.time()
-my_maze = maze.Maze(raw, 20, 20)
+my_maze = maze.Maze(raw, 200, 200)
 t2 = time.time()
 print("It took {0} seconds to load".format(t2 - t1))
-for index, node in my_maze.maze.items():
-    my_maze.raw_maze[node.location["y"] + 1:node.location["y"] + 13, node.location["x"] + 1:node.location["x"] + 13] = [240, 0, 0, 255]
-imageio.imwrite("mazes/png/output.png", my_maze.raw_maze)
+my_maze.draw_nodes()
+my_maze.save_maze("mazes/png/output.png")

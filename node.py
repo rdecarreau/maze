@@ -22,6 +22,10 @@ class Node:
     def above(self, index):
         self.neighbors[self.ABOVE] = index
 
+    @above.deleter
+    def above(self):
+        del self.neighbors[self.ABOVE]
+
     @property
     def below(self):
         return self._get_neighbor(self.BELOW)
@@ -29,6 +33,10 @@ class Node:
     @below.setter
     def below(self, index):
         self.neighbors[self.BELOW] = index
+
+    @below.deleter
+    def below(self):
+        del self.neighbors[self.BELOW]
 
     @property
     def left(self):
@@ -38,6 +46,10 @@ class Node:
     def left(self, index):
         self.neighbors[self.LEFT] = index
 
+    @left.deleter
+    def left(self):
+        del self.neighbors[self.LEFT]
+
     @property
     def right(self):
         return self._get_neighbor(self.RIGHT)
@@ -45,6 +57,10 @@ class Node:
     @right.setter
     def right(self, index):
         self.neighbors[self.RIGHT] = index
+
+    @right.deleter
+    def right(self):
+        del self.neighbors[self.RIGHT]
 
     def _get_neighbor(self, location):
         if location in self.neighbors:

@@ -27,11 +27,11 @@ expected_cells_20_20 = [
 ]
 
 
-@pytest.mark.parametrize("maze_png, num_row, num_col, expected_cells", [
+@pytest.mark.parametrize("maze_png, num_col, num_row, expected_cells", [
     ("mazes/png/200-200-orthogonal.png", 200, 200, expected_cells_200_200),
     ("mazes/png/20-20-orthogonal.png", 20, 20, expected_cells_20_20)
 ])
-def test_load_square(maze_png, num_row, num_col, expected_cells):
+def test_load_square(maze_png, num_col, num_row, expected_cells):
     raw = imageio.imread(maze_png)
     my_maze = maze.Maze(raw, num_row, num_col)
     assert my_maze.wall_thickness == 2

@@ -1,0 +1,16 @@
+atomicwrites==1.4.0
+attrs==21.2.0
+colorama==0.4.4
+imageio==2.9.0
+importlib-metadata==4.5.0
+iniconfig==1.1.1
+numpy==1.19.5
+packaging==20.9
+Pillow==8.2.0
+pluggy==0.13.1
+py==1.10.0
+pyparsing==2.4.7
+pytest==6.2.4
+toml==0.10.2
+typing-extensions==3.10.0.0
+zipp==3.4.1

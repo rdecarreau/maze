@@ -9,5 +9,6 @@ My best estimates right now are O((rows*columns) * log(branches)) but that is re
 ## Generators
 
 I didn't have to work out the generators because I used some cool ones already available:
-Multipath: https://keesiemeijer.github.io/maze-generator
-Other: http://www.mazegenerator.net/
+
+* Multipath: https://keesiemeijer.github.io/maze-generator
+* Other: http://www.mazegenerator.net/

@@ -9,11 +9,14 @@ import maze
 @pytest.mark.parametrize("maze_path, num_col, num_row, runtime, repeat", [
 
     ("mazes/png/20-20-orthogonal-low-r.png", 20, 20, 0.0005, 10),
+    ("mazes/png/20-20-orthogonal-multipath.png", 20, 20, 0.0005, 10),
     ("mazes/png/20-20-orthogonal.png", 20, 20, 0.0005, 10),
-    ("mazes/png/200-200-orthogonal-high-e.png", 200, 200, 0.0005, 5),
-    ("mazes/png/200-200-orthogonal-low-e.png", 200, 200, 0.0005, 5),
-    ("mazes/png/200-200-orthogonal-low-r.png", 200, 200, 0.0005, 5),
-    ("mazes/png/200-200-orthogonal.png", 200, 200, 0.0005, 5)
+    ("mazes/png/200-200-orthogonal-high-e.png", 200, 200, 0.0005, 1),
+    ("mazes/png/200-200-orthogonal-low-e.png", 200, 200, 0.0005, 1),
+    ("mazes/png/200-200-orthogonal-low-r.png", 200, 200, 0.0005, 1),
+    ("mazes/png/200-200-orthogonal-multipath-30.png", 200, 200, 0.0005, 1),
+    ("mazes/png/200-200-orthogonal-multipath.png", 200, 200, 0.0005, 1),
+    ("mazes/png/200-200-orthogonal.png", 200, 200, 0.0005, 1)
 ])
 def test_runtime(maze_path, num_col, num_row, runtime, repeat):
     tsum = 0

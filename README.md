@@ -5,3 +5,9 @@ Uses a single-pass filtering algorithm to find all possible paths through a maze
 ## Runtime
 
 My best estimates right now are O((rows*columns) * log(branches)) but that is really preliminary.
+
+## Generators
+
+I didn't have to work out the generators because I used some cool ones already available:
+Multipath: https://keesiemeijer.github.io/maze-generator
+Other: http://www.mazegenerator.net/
